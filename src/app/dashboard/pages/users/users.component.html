@@ -1,0 +1,11 @@
+<button class="mb-5" (click)="OnCreateUser()" mat-raised-button color="warn" type="button">
+  Generar nuevo Usuario
+</button>
+
+<router-outlet></router-outlet>
+
+<app-user-table
+  [dataSource]="(users | async) || []"
+  (deleteUser)="onDeleteUser($event)"
+  (editUser)="onEditUser($event)">
+</app-user-table>
