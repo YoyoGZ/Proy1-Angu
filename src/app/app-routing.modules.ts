@@ -5,27 +5,20 @@ import { AuthComponent } from "./auth/auth.component";
 import { authGuard } from "./core/guards/auth.guard";
 
 
+
 const routes: Routes = [
-    {
-        path: '',
+    
+    { path: 'dashboard',
         component: DashboardComponent,
-        children: [
-            {
-                path: 'dashboard', 
-                loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
-            },
-
-            {
-                path: 'users',
-                loadChildren: () => import('./dashboard/pages/users/users.module').then((m) => m.UsersModule),
-            },
-
-            {
-                path: 'auth',
-                loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
-            },
-        ]
+            loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
     },
+
+    { path: 'auth',
+        component: AuthComponent,
+            loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+    },
+     
+    { path: '**', redirectTo: '/home',}
 ]
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

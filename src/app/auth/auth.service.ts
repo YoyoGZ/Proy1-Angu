@@ -21,10 +21,10 @@ export class AuthService {
   login(loginData : loginData): void {
     const MOCK_USER: User ={
       id: 50,
-      name: 'fakeName',
-      surname: 'fakeSurname',
+      name: 'Van',
+      surname: 'Halen',
       email: 'fake@email.com',
-      password: '123456'
+      password: '123'
     }
 
     if(loginData.email === MOCK_USER.email && loginData.password === MOCK_USER.password){

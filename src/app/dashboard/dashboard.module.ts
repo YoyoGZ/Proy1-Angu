@@ -12,7 +12,6 @@ import { NavMenuComponent } from './layout/nav-menu/nav-menu.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { UserRoutingModule } from './pages/users/user-routing.modules';
-import { UsersModule } from './pages/users/users.module';
 
 @NgModule({
   declarations: [

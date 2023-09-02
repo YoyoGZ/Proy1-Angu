@@ -9,9 +9,6 @@ import { RouterModule } from '@angular/router';
 import { UserDetailComponent } from './pages/user.detail/user.detail.component';
 import { UserRoutingModule } from './user-routing.modules';
 
-
-
-
 @NgModule({
   declarations: [
     UsersComponent,

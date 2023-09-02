@@ -1,18 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { UsersComponent } from './users.component';
 import { UserDetailComponent } from './pages/user.detail/user.detail.component';
-
+import { StudentsComponent } from './students/students.component';
+import { TeachersComponent } from './teachers/teachers.component';
 
 @NgModule({
     imports: [CommonModule,
               RouterModule.forChild([
-                    { path: '', component: UsersComponent,},
                     { path: ':id', component: UserDetailComponent,},
-                    { path: 'students',
+                    { path: 'students',component: StudentsComponent,
                         loadChildren: () => import('./students/students.module').then((m) => m.StudentsModule),},                       
-                    { path: 'teachers',
+                    { path: 'teachers', component: TeachersComponent,
                         loadChildren: () => import('./teachers/teachers.module').then((m) => m.TeacherModule),},
                   ]),
               ],

@@ -1,12 +1,14 @@
 <main class="menu">
   <mat-nav-list class="item-nav">
+      <a routerLink="home" mat-list-item>Inicio</a>
+      <br>
       <a routerLink="users" mat-list-item>Usuarios</a>
       <br>
       <a routerLink="courses" mat-list-item>Cursos</a>
       <br>
-      <a routerLink="./users/students" mat-list-item>Estudiantes</a>
+      <a routerLink="../users/students" mat-list-item>Estudiantes</a>
       <br>
-      <a routerLink="./users/teachers" mat-list-item>Profesores</a>
+      <a routerLink="../users/teachers" mat-list-item>Profesores</a>
       <br>
       <a (click)="logout()" mat-list-item>Finalizar Sesion</a>  
     </mat-nav-list>
